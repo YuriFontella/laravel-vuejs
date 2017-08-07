@@ -8,6 +8,11 @@ use App\User;
 
 class NotebookController extends Controller
 {
+
+  function __construct() {
+    $this->middleware('jwt.auth')->only('index');
+  }
+
   public function index() {
     // return Notebook::all();
     return Notebook::with('user')->latest()->get();

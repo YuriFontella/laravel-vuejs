@@ -1,3 +1,6 @@
+Projeto inspirado no tutorial: 
+https://www.youtube.com/playlist?list=PLzz9vf6075V09C_KIbYNcOyspKWhBHTLI
+
 **Iniciando após o git clone:** 
 
 ```bash

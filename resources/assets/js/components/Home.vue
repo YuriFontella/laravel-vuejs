@@ -49,7 +49,9 @@ export default {
       loading: false,
       form: '',
 
-      notebookData: { name: '', body: '' }
+      notebookData: { name: '', body: '' },
+
+      token: localStorage.getItem('token')
     }
   },
   methods: {
@@ -92,7 +94,7 @@ export default {
 
     fetch() {
       this.loading = true;
-      axios.get('/notebooks').then((response) => { this.notebooks = response.data; this.loading = false; });
+      axios.get('/notebooks?token=' + this.token).then((response) => { this.notebooks = response.data; this.loading = false; });
     }
   },
   mounted() {
